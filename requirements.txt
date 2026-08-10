@@ -1,0 +1,10 @@
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.2
+selenium>=4.20
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+sentence-transformers>=2.7
+plotly>=5.22
+streamlit>=1.36
