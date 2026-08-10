@@ -9,6 +9,20 @@ uses those findings to power a resume-to-market matcher.
 
 ---
 
+## Narrated walkthroughs
+
+Two interactive, self-narrating pages (browser text-to-speech + synced
+captions, no video file — screen-record them if you need an actual .mp4):
+
+- **[Signal Line](https://claude.ai/code/artifact/c4731574-9400-464a-ae14-da690f5769c1)** — a 9-stop tour of the architecture, diagram by diagram.
+- **[Read the Diff](https://claude.ai/code/artifact/46df4513-545d-4d79-9084-3eac49d95887)** — a file-by-file code review, real verbatim snippets with the relevant line highlighted.
+
+Both start **private** (only visible to the account that published them) —
+use the share menu on the page if you want to send either link to someone
+else.
+
+---
+
 ## What it does
 
 1. **Collects** job postings (`src/scraper.py`, `src/generate_data.py`) into
@@ -110,6 +124,11 @@ Module-to-stage mapping, if you're jumping into the code:
 | Visualization | `src/visualize.py` | `plotly.express`, `plotly.graph_objects.Heatmap` |
 | Dashboard | `dashboard.py` | `streamlit`, `st.cache_data` |
 | Resume matching | `src/resume_matcher.py` | `SentenceTransformer("all-MiniLM-L6-v2")`, `TfidfVectorizer`, cosine similarity |
+
+For the engineer-level version of this — actual function call sequences,
+how the DataFrame schema grows at each stage, the embeddings→TF-IDF
+fallback path, why `max_df=0.4` matters for the topic model — see
+**[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
 ---
 
